@@ -44,6 +44,9 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
+  .App {
+    background-color: $background-color;
+  }
   #quote-box {
     width: 100vw;
     height: 100vh;
@@ -54,6 +57,9 @@ body {
 }
 
 @media only screen and (max-width: 750px) {
+  .App {
+    background-color: $background-color;
+  }
   #quote-box {
     width: 100vw;
     height: 100%;
