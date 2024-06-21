@@ -1,0 +1,142 @@
+$text-color: white;
+$background-color: #afae6a; 
+$btn-color: #555435; 
+$btn-color-hover: #5e5c3a; 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  text-align: center;
+  background-color: $text-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6em;
+}
+
+#quote-box {
+  opacity: 0; /* for animation with jquery */
+  width: 50vw;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between;
+  background-color: $background-color;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s linear;
+  padding: 3em;
+  border-radius: 2vh;
+}
+
+@media only screen and (max-width: 1024px) {
+  #quote-box {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding: 3em;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #quote-box {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding: 2em;
+    box-shadow: none;
+  }
+}
+
+#text, #author {
+    color: $text-color;
+}
+
+#text {
+  font-size: 1.1em;
+
+}
+
+#author {
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  line-height: 1.4em;
+}
+
+.author-line {
+  font-size: 2.5em;
+  vertical-align: -30%; 
+}
+
+.quotes {
+  font-size: 3.5em;
+  vertical-align: -2000%; 
+  line-height: 2%;
+}
+
+#links {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4em;
+  padding-left: 1em;
+  span:nth-of-type(3) {
+    margin-left: auto;
+    padding-right: 1em;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #links {
+    padding-left: 1em;
+  }
+  #links span:nth-of-type(3) {
+    padding-right: 1em;
+  }
+}
+
+#tweet-quote, #tumblr-quote {
+  font-size: 0.8em;
+  color: $text-color;
+  background-color: $btn-color;
+  outline: none; 
+  width: 2.2em;
+}
+
+#tweet-quote:hover,
+#tweet-quote:active, 
+#tumblr-quote:hover,
+#tumblr-quote:active {
+  
+  background-color: $btn-color-hover;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+#new-quote {
+  color: $text-color;
+  background-color: $btn-color;
+  font-size: 0.8em;
+  // letter-spacing: 0.05em; 
+  outline: none;
+
+}
+
+#new-quote:hover, 
+#new-quote:active {
+  background-color: $btn-color-hover;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+}
